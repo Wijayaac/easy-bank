@@ -2,6 +2,7 @@
   // Hamburger Open styles
   position: relative;
   z-index: 1;
+  background-color: $white;
   &.open {
     .overlay {
       display: block;

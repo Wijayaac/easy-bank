@@ -94,6 +94,7 @@ body {
   line-height: 1.3em;
   font-weight: 300;
   min-height: 500vh;
+  overflow-x: hidden;
 }
 
 @media (min-width: 64em) {
@@ -276,6 +277,7 @@ button:hover,
 .header {
   position: relative;
   z-index: 1;
+  background-color: white;
 }
 
 .header.open .overlay {
@@ -436,12 +438,11 @@ button:hover,
   .hero__image::before {
     content: "";
     position: absolute;
-    width: 150%;
     height: 100%;
     background-image: url("/images/bg-intro-desktop.svg");
-    background-size: 93%;
     background-repeat: no-repeat;
     background-position: center bottom;
+    width: 150%;
     background-size: 122%;
     background-position: 0% 83%;
   }
@@ -470,8 +471,8 @@ button:hover,
     height: 122%;
     background-size: 94%;
     background-position: center 150%;
-    left: 22%;
-    top: -14%;
+    left: 28%;
+    top: -9%;
   }
 }
 
@@ -570,5 +571,81 @@ button:hover,
 .feature__description {
   font-size: 0.875rem;
   line-height: 1.5rem;
+}
+
+.articles {
+  background-color: #fafafa;
+}
+
+.article__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 1.875rem;
+}
+
+@media (min-width: 40em) {
+  .article__grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 64em) {
+  .article__grid {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.article__item {
+  border-radius: 0.3125rem;
+  overflow: hidden;
+  background-color: white;
+  -webkit-box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+.article__item:hover {
+  -webkit-transform: scale(1.025);
+          transform: scale(1.025);
+}
+
+.article__image {
+  height: 12.5rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.article__text {
+  padding: 1.875rem 1.5rem 2.5rem 1.5rem;
+  color: #9698a6;
+}
+
+@media (min-width: 40em) {
+  .article__text {
+    padding: 1.875rem 1.5rem;
+  }
+}
+
+.article__author {
+  font-size: 0.625rem;
+  margin-bottom: 1rem;
+}
+
+.article__title {
+  font-size: 1.125rem;
+  line-height: 1.2;
+  color: #2d314d;
+  margin-bottom: 0.875rem;
+}
+
+.article__description {
+  font-size: 0.875rem;
+  line-height: 1.2;
 }
 /*# sourceMappingURL=style.css.map */

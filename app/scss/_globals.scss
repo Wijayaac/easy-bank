@@ -16,6 +16,8 @@ body {
   line-height: 1.3em;
   font-weight: 300;
   min-height: 500vh;
+  overflow-x: hidden;
+
   @include breakpoint-up(large) {
     font-size: $font-md;
   }
