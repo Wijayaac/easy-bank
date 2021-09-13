@@ -93,6 +93,7 @@ body {
   color: #9698a6;
   line-height: 1.3em;
   font-weight: 300;
+  min-height: 500vh;
 }
 
 @media (min-width: 64em) {
@@ -108,7 +109,39 @@ body.noscroll {
 h1,
 h2,
 h3 {
+  font-weight: 300;
+  line-height: 1.15;
   margin-top: 0;
+  color: #2d314d;
+}
+
+h1 {
+  font-size: 2.31rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 64em) {
+  h1 {
+    text-align: left;
+    font-size: 3.25rem;
+  }
+}
+
+h2 {
+  font-size: 1.875rem;
+  margin-bottom: 1.5625rem;
+}
+
+@media (min-width: 64em) {
+  h2 {
+    font-size: 2.25rem;
+    margin-bottom: 2.25rem;
+  }
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 2.25rem;
 }
 
 a,
@@ -123,15 +156,29 @@ a:hover {
 }
 
 .container--pa {
-  padding-top: 2.25rem;
+  padding-top: 4.375rem;
   padding-right: 1.5rem;
-  padding-bottom: 2.25rem;
+  padding-bottom: 4.375rem;
   padding-left: 1.5rem;
 }
 
+@media (min-width: 64em) {
+  .container--pa {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
 .container--py {
-  padding-top: 2.25rem;
-  padding-bottom: 2.25rem;
+  padding-top: 4.375rem;
+  padding-bottom: 4.375rem;
+}
+
+@media (min-width: 64em) {
+  .container--py {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
 }
 
 .container--px {
@@ -140,7 +187,13 @@ a:hover {
 }
 
 .container--pt {
-  padding-top: 2.25rem;
+  padding-top: 4.375rem;
+}
+
+@media (min-width: 64em) {
+  .container--pt {
+    padding-top: 6rem;
+  }
 }
 
 .container--pr {
@@ -148,7 +201,13 @@ a:hover {
 }
 
 .container--pb {
-  padding-bottom: 2.25rem;
+  padding-bottom: 4.375rem;
+}
+
+@media (min-width: 64em) {
+  .container--pb {
+    padding-bottom: 6rem;
+  }
 }
 
 .container--pl {
@@ -356,7 +415,7 @@ button:hover,
 @media (min-width: 40em) {
   .hero__image {
     min-height: 25rem;
-    background-position: center 60%;
+    background-position: center 70%;
   }
 }
 
@@ -373,20 +432,16 @@ button:hover,
   }
 }
 
-.hero__image::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url("/images/bg-intro-desktop.svg");
-  background-size: 93%;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-}
-
 @media (min-width: 64em) {
   .hero__image::before {
+    content: "";
+    position: absolute;
     width: 150%;
+    height: 100%;
+    background-image: url("/images/bg-intro-desktop.svg");
+    background-size: 93%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
     background-size: 122%;
     background-position: 0% 83%;
   }
@@ -416,6 +471,7 @@ button:hover,
     background-size: 94%;
     background-position: center 150%;
     left: 22%;
+    top: -14%;
   }
 }
 
@@ -435,31 +491,46 @@ button:hover,
   }
 }
 
-.hero__text h1 {
-  font-weight: 300;
-  font-size: 2.31rem;
-  line-height: 1.15;
-  margin-bottom: 1.5rem;
-  color: #2d314d;
+.feature {
+  background-color: #f3f4f6;
+  text-align: center;
 }
 
-@media (min-width: 64em) {
-  .hero__text h1 {
+@media (min-width: 40em) {
+  .feature {
     text-align: left;
-    font-size: 3.25rem;
   }
 }
 
-.hero__text p {
-  line-height: 1.5;
-  margin-bottom: 2.25rem;
+.feature__intro {
+  margin-bottom: 3.75rem;
 }
 
 @media (min-width: 64em) {
+  .feature__intro {
+    max-width: 66%;
+  }
+}
+
+@media (min-width: 40em) {
   .feature__grid {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.feature__item {
+  padding: 0.9375rem;
+}
+
+@media (min-width: 40em) {
+  .feature__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
   }
 }
 
@@ -469,5 +540,35 @@ button:hover,
         -ms-flex: 1;
             flex: 1;
   }
+}
+
+.feature__icon {
+  margin-bottom: 1.875rem;
+}
+
+@media (min-width: 64em) {
+  .feature__icon {
+    margin-bottom: 2.275rem;
+  }
+}
+
+.feature__title {
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.15;
+  color: #2d314d;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 64em) {
+  .feature__title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.feature__description {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
 }
 /*# sourceMappingURL=style.css.map */
