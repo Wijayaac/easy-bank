@@ -15,7 +15,7 @@ body {
   color: $grayishBlue;
   line-height: 1.3em;
   font-weight: 300;
-  min-height: 500vh;
+  min-height: 800vh;
   overflow-x: hidden;
 
   @include breakpoint-up(large) {
@@ -139,8 +139,19 @@ button,
   font-size: $font-sm;
   transition: opacity 300ms ease-in-out;
   overflow: hidden;
-  &:hover {
-    opacity: 0.75;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.25);
+    opacity: 0;
+    transition: 150ms ease-in-out;
+  }
+  &:hover::before {
+    opacity: 1;
   }
 }
 
